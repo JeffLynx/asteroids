@@ -13,6 +13,9 @@ def main():
 	we_are_playing_asteroids = True	
 
 	while we_are_playing_asteroids:
+		for event in pygame.event.get():
+			if event.type == pygame.QUIT:
+				return
 		screen.fill((0, 0, 0))
 		pygame.display.flip()
 
